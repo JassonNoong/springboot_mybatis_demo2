@@ -2,14 +2,15 @@
 <!DOCTYPE configuration  
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
-  
-  <configuration>
+
+<configuration>
 	<!-- 设定别名 -->
-    <typeAliases>
-        <package name="cn.nongdewang.entity"/>
-    </typeAliases>
-    <!-- 查找映射sql文件 -->
-    <mappers>
-    <package name="cn.nongdewang.dao" />
-    </mappers>
-  </configuration>
+	<typeAliases>
+		<package name="cn.nongdewang.entity" />
+	</typeAliases>
+	<!-- 查找映射sql文件 -->
+<!--设置驼峰命名  如果dao类和xml在同一包下就不用该设置-->
+<!-- 	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings> -->
+</configuration>

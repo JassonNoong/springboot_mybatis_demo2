@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="cn.nongdewang.dao.UserMapper">
+		<insert id="save" parameterType="person">  
+			insert into person(id,name,password) 
+			value(#{id},#{name},#{password})
+		</insert>
+		
+		<select id="findAllUsers" resultType="person">
+			SELECT * FROM 	person
+		</select>
+		
+		<select id="findUserByID" parameterType="int" resultType="person">
+			SELECT * FROM person where id=#{id}
+		</select>
+		
+		<update id="updateUser" parameterType="person">
+			UPDATE person SET name =#{name},password=#{password} where id =#{id}
+		</update>
+		
+		<delete id="deleteUser" parameterType="person">
+			delete from person where id =#{id}
+		</delete> 
+</mapper>

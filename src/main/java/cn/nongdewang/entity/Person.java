@@ -8,20 +8,16 @@ public class Person implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String name;
-	// @Value("${person.password}")
-	// @NotEmpty(message="密码不能为空")
-	private String password;
-	// @Value("${person.id}")
-	/*@Id
-	@GeneratedValue*/
-	// @Max(message="id不能大于100", value = 0)
 	private Integer id;
+	private String name;
+	private String password;
+
+
 
 	public Person() {
 	}
 
-	;
+	
 
 	public Person(Integer id,String name, String password) {
 		this();
